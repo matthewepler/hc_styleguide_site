@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+@font-face {
+  font-family: gotham-med;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/gotham-med.woff") format("woff");
+}
+
+@font-face {
+  font-family: gotham-lt;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/gotham-lt.woff") format("woff");
+}
+
+@font-face {
+  font-family: bebasneue;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/bebasneue.woff") format("woff");
+}
+
+@font-face {
+  font-family: gotham-book;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/gotham-book.woff") format("woff");
+}
+
+h1, h2, h3 {
+  font-family: bebasneue;
+  color: #4a4a4a;
+}
+
+h1, h2 {
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-family: gotham-book;
+  color: #4a4a4a;
+  font-size: 1rem;
+}
+
+@media (min-width: 48em) {
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+body {
+  background: white;
+}

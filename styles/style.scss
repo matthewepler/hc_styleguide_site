@@ -1,0 +1,68 @@
+//- VARIABLES -//
+$site-black: 	rgb(74, 74, 74); 	// #4a4a4a
+$site-grey:  	rgb(85, 85, 85);	// #555555
+$site-lt-grey: 	rgb(216, 216, 216); // #D8D8D8
+$site-white: 	white;
+
+$lg-screen: 960;
+$med-screen: 768;
+$sm-screen: 480;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+@mixin forLargeScreens($media) {
+	@media (min-width: $media/16+em) { @content; }
+}
+
+@mixin fontFace($font-family, $file-path) {
+    @font-face {
+        font: {
+            family: $font-family;
+            weight: normal;
+            style:  normal;
+        }
+      //Modern Browsers
+        src: url('#{$file-path}.woff') format('woff');
+    }
+}
+@include fontFace(gotham-med,  '../fonts/gotham-med');
+@include fontFace(gotham-lt,   '../fonts/gotham-lt');
+@include fontFace(bebasneue,   '../fonts/bebasneue');
+@include fontFace(gotham-book, '../fonts/gotham-book');
+
+h1, h2, h3 {
+	font-family: bebasneue;
+	color: $site-black;
+}
+
+h1, h2 {
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+p {
+	font-family: gotham-book;
+	color: $site-black;
+	font-size: 1rem;
+	@include forLargeScreens($med-screen) {
+		font-size: 0.85rem;
+	}
+}
+
+body {
+	background: $site-white;
+}
