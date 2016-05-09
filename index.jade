@@ -13,43 +13,172 @@ html
 		h2 INTRO
 		
 		p.
-			 This is how we make the interwebs at HC. Everything you see is built with stuff we actually use. When making a new web project, you can use this as your guide for all aesthetic and technical choices. this is meant to be a living document. as our standards change, so shall this site. amen. 
+			 This is how we make the interwebs at HC. Everything you see is built with stuff we actually use. When making a new web project, you can use this as your guide for all aesthetic and technical choices. this is meant to be a living document. as our standards change, so shall this site. Amen. 
 
 		h2 HOW TO USE THIS SITE
 		p.
-			This site is meant as a quick reference with links to the tech we use and explanations of how we use them. Use it to figure out what you should use so we're all in sync. This site is also used to generate our style guide with <a href="https://github.com/devbridge/Styleguide">this doohickey</a>. For our complete style guide, go <a href="#">here</a>.
+			This site is meant as a quick reference with links to the tech we use and explanations of how we use them. Use it to figure out what you should use so we're all in sync. This site is also used to generate our style guide with #[a(href="https://github.com/devbridge/Styleguide") this doohickey]. For our complete style guide, go #[a(href="#") here].
 
 
 		#contents
 			h2 contents
 			ul
-				li support
-				li aesthetics
-				li assets
-					ul
+				li #[a(href="#browsers-and-devices") 1. Browsers and Devices]
+				br
+				li #[a(href="#aesthetics") 2. Aesthetics]
+				br
+				li #[a(href="#assets") 3. Assets]
+					ul.indent1
 						li logos
 						li fonts
 						li images
 						li icons/glyphs
-				li front-end
-					ul
+						br
+				li #[a(href="#front-end") 4. Front-end]
+					ul.indent1
 						li tech stack
 						li layout
 						li code style and best practices
-				li back-end
-					ul
+						br
+				li #[a(href="#back-end") 5. Back-end]
+					ul.indent1
 						li tech stack
 						li git practices
 						li code style and best practices
-				li about this site
+						br
+				li #[a(href="#about") 6. About this site]
+		br
+		hr
+		
+		//- Browsers & Devices -//
+		h2#browsers-and-devices Browsers and Devices
+		h3 Supported browsers
+		p As of 2016, we support the latest version of every browser as well as the previous version. 
+		table#contents
+			tr
+				td IE
+				td Edge
+				td Firefox
+				td Chrome
+				td Safari
+				td Opera
+				td iOS Safari
+				td Opera Mini
+				td Android Browser
+				td Chrome for Android
+			tr
+				td 9
+				td 13
+				td 45
+				td 49
+				td 9
+				td 36
+				td 8.4
+				td 8
+				td 4.4.4
+				td 50
 
+		h3 Supported Operating Systems
+		p.
+			At this time, we develop for the most current operating system across platforms. If a project is going to be released to the market, we rely on third-party vendors to take care of compatibility issues. 
 
+		h3 Programming for Supported Devices & Hybrid Apps
+		p.
+			Because of our existing partnerships, we try to compile for iOS, Androids, and Windows mobile platforms. This is done using the technology of your choice. As of Spring, 2016, the Product team is using #[a(href="https://facebook.github.io/react-native/") React Native], and R&D has explored #[a(href="https://software.intel.com/en-us/intel-xdk") Intel XDK] and is learning React but no platform has been chosen.  
+		
+		br
+		
 		//- Aesthetics -//
-		h2 Aesthetics
-		#palette
-			p colors go here
+		h2#aesthetics Aesthetics
+		p.
+			Full style guide #[a(href="#") is available here]. It includes HTML/SCSS/CSS snippets, styles, colors, etc. Use it!
+
+		h3 Colors
+		.boxes#color-boxes
+			.box-div#global-color
+				p.strong GLOBAL
+				.box#global-color-box
+				table
+					tr
+						td.strong RGB
+						td 80, 158, 47
+					tr
+						td.strong CMYK
+						td 79, 0, 100, 2
+					tr
+						td.strong HEX
+						td #509E2f
+					tr
+						td.strong Pantone
+						td 362C 7739U	
+			.box-div#safety-color
+				p.strong SAFETY
+				.box#safety-color-box
+				table
+					tr
+						td.strong RGB
+						td 255, 105, 0
+					tr
+						td.strong CMYK
+						td 0, 56, 90, 0
+					tr
+						td.strong HEX
+						td #FF6900
+					tr
+						td.strong Pantone
+						td 1505C 021U	
+			.box-div#labs-color
+				p.strong LABS
+				.box#labs-color-box
+				table
+					tr
+						td.strong RGB
+						td 150, 60, 189
+					tr
+						td.strong CMYK
+						td 58, 87, 0, 0
+					tr
+						td.strong HEX
+						td #963CBD
+					tr
+						td.strong Pantone
+						td 7442C 2070U	
+			.box-div#institute-color
+				p.strong INSTITUTE
+				.box#institute-color-box
+				table
+					tr
+						td.strong RGB
+						td 128, 148, 221
+					tr
+						td.strong CMYK
+						td 55, 37, 0, 0
+					tr
+						td.strong HEX
+						td #8094DD
+					tr
+						td.strong Pantone
+						td 7452C
+			.box-div#all-black
+				p.strong BLACK
+				.box#all-black-box
+				table
+					tr
+						td.strong RGB
+						td 65, 65, 66
+					tr
+						td.strong CMYK
+						td 0, 0, 0, 90
+					tr
+						td.strong HEX
+						td #393637
+					tr
+						td.strong Pantone
+						td 90%
 
 		hr
+
+
 
 		footer
 			p this is a footer.

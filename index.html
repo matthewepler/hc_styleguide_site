@@ -11,48 +11,199 @@
     <h1>HC Web Dev Guide</h1>
     <h2>INTRO</h2>
     <p>
-       This is how we make the interwebs at HC. Everything you see is built with stuff we actually use. When making a new web project, you can use this as your guide for all aesthetic and technical choices. this is meant to be a living document. as our standards change, so shall this site. amen. 
+       This is how we make the interwebs at HC. Everything you see is built with stuff we actually use. When making a new web project, you can use this as your guide for all aesthetic and technical choices. this is meant to be a living document. as our standards change, so shall this site. Amen. 
       
     </p>
     <h2>HOW TO USE THIS SITE</h2>
-    <p>
-      This site is meant as a quick reference with links to the tech we use and explanations of how we use them. Use it to figure out what you should use so we're all in sync. This site is also used to generate our style guide with <a href="https://github.com/devbridge/Styleguide">this doohickey</a>. For our complete style guide, go <a href="#">here</a>.
+    <p>This site is meant as a quick reference with links to the tech we use and explanations of how we use them. Use it to figure out what you should use so we're all in sync. This site is also used to generate our style guide with <a href="https://github.com/devbridge/Styleguide">this doohickey</a>. For our complete style guide, go <a href="#">here</a>.
       
       
     </p>
     <div id="contents">
       <h2>contents</h2>
       <ul>
-        <li>support</li>
-        <li>aesthetics</li>
-        <li>assets
-          <ul>
+        <li><a href="#browsers-and-devices">1. Browsers and Devices</a></li><br/>
+        <li><a href="#aesthetics">2. Aesthetics</a></li><br/>
+        <li><a href="#assets">3. Assets</a>
+          <ul class="indent1">
             <li>logos</li>
             <li>fonts</li>
             <li>images</li>
-            <li>icons/glyphs</li>
+            <li>icons/glyphs</li><br/>
           </ul>
         </li>
-        <li>front-end
-          <ul>
+        <li><a href="#front-end">4. Front-end</a>
+          <ul class="indent1">
             <li>tech stack</li>
             <li>layout</li>
-            <li>code style and best practices</li>
+            <li>code style and best practices</li><br/>
           </ul>
         </li>
-        <li>back-end
-          <ul>
+        <li><a href="#back-end">5. Back-end</a>
+          <ul class="indent1">
             <li>tech stack</li>
             <li>git practices</li>
-            <li>code style and best practices</li>
+            <li>code style and best practices</li><br/>
           </ul>
         </li>
-        <li>about this site</li>
+        <li><a href="#about">6. About this site</a></li>
       </ul>
-    </div>
-    <h2>Aesthetics</h2>
-    <div id="palette">
-      <p>colors go here</p>
+    </div><br/>
+    <hr/>
+    <h2 id="browsers-and-devices">Browsers and Devices</h2>
+    <h3>Supported browsers</h3>
+    <p>As of 2016, we support the latest version of every browser as well as the previous version. </p>
+    <table id="contents">
+      <tr>
+        <td>IE</td>
+        <td>Edge</td>
+        <td>Firefox</td>
+        <td>Chrome</td>
+        <td>Safari</td>
+        <td>Opera</td>
+        <td>iOS Safari</td>
+        <td>Opera Mini</td>
+        <td>Android Browser</td>
+        <td>Chrome for Android</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>13</td>
+        <td>45</td>
+        <td>49</td>
+        <td>9</td>
+        <td>36</td>
+        <td>8.4</td>
+        <td>8</td>
+        <td>4.4.4</td>
+        <td>50</td>
+      </tr>
+    </table>
+    <h3>Supported Operating Systems</h3>
+    <p>
+      At this time, we develop for the most current operating system across platforms. If a project is going to be released to the market, we rely on third-party vendors to take care of compatibility issues. 
+      
+    </p>
+    <h3>Programming for Supported Devices & Hybrid Apps</h3>
+    <p>Because of our existing partnerships, we try to compile for iOS, Androids, and Windows mobile platforms. This is done using the technology of your choice. As of Spring, 2016, the Product team is using <a href="https://facebook.github.io/react-native/">React Native</a>, and R&D has explored <a href="https://software.intel.com/en-us/intel-xdk">Intel XDK</a> and is learning React but no platform has been chosen.  
+      
+    </p><br/>
+    <h2 id="aesthetics">Aesthetics</h2>
+    <p>Full style guide <a href="#">is available here</a>. It includes HTML/SCSS/CSS snippets, styles, colors, etc. Use it!
+      
+    </p>
+    <h3>Colors</h3>
+    <div id="color-boxes" class="boxes">
+      <div id="global-color" class="box-div">
+        <p class="strong">GLOBAL</p>
+        <div id="global-color-box" class="box"></div>
+        <table>
+          <tr>
+            <td class="strong">RGB</td>
+            <td>80, 158, 47</td>
+          </tr>
+          <tr>
+            <td class="strong">CMYK</td>
+            <td>79, 0, 100, 2</td>
+          </tr>
+          <tr>
+            <td class="strong">HEX</td>
+            <td>#509E2f</td>
+          </tr>
+          <tr>
+            <td class="strong">Pantone</td>
+            <td>362C 7739U	</td>
+          </tr>
+        </table>
+      </div>
+      <div id="safety-color" class="box-div">
+        <p class="strong">SAFETY</p>
+        <div id="safety-color-box" class="box"></div>
+        <table>
+          <tr>
+            <td class="strong">RGB</td>
+            <td>255, 105, 0</td>
+          </tr>
+          <tr>
+            <td class="strong">CMYK</td>
+            <td>0, 56, 90, 0</td>
+          </tr>
+          <tr>
+            <td class="strong">HEX</td>
+            <td>#FF6900</td>
+          </tr>
+          <tr>
+            <td class="strong">Pantone</td>
+            <td>1505C 021U	</td>
+          </tr>
+        </table>
+      </div>
+      <div id="labs-color" class="box-div">
+        <p class="strong">LABS</p>
+        <div id="labs-color-box" class="box"></div>
+        <table>
+          <tr>
+            <td class="strong">RGB</td>
+            <td>150, 60, 189</td>
+          </tr>
+          <tr>
+            <td class="strong">CMYK</td>
+            <td>58, 87, 0, 0</td>
+          </tr>
+          <tr>
+            <td class="strong">HEX</td>
+            <td>#963CBD</td>
+          </tr>
+          <tr>
+            <td class="strong">Pantone</td>
+            <td>7442C 2070U	</td>
+          </tr>
+        </table>
+      </div>
+      <div id="institute-color" class="box-div">
+        <p class="strong">INSTITUTE</p>
+        <div id="institute-color-box" class="box"></div>
+        <table>
+          <tr>
+            <td class="strong">RGB</td>
+            <td>128, 148, 221</td>
+          </tr>
+          <tr>
+            <td class="strong">CMYK</td>
+            <td>55, 37, 0, 0</td>
+          </tr>
+          <tr>
+            <td class="strong">HEX</td>
+            <td>#8094DD</td>
+          </tr>
+          <tr>
+            <td class="strong">Pantone</td>
+            <td>7452C</td>
+          </tr>
+        </table>
+      </div>
+      <div id="all-black" class="box-div">
+        <p class="strong">BLACK</p>
+        <div id="all-black-box" class="box"></div>
+        <table>
+          <tr>
+            <td class="strong">RGB</td>
+            <td>65, 65, 66</td>
+          </tr>
+          <tr>
+            <td class="strong">CMYK</td>
+            <td>0, 0, 0, 90</td>
+          </tr>
+          <tr>
+            <td class="strong">HEX</td>
+            <td>#393637</td>
+          </tr>
+          <tr>
+            <td class="strong">Pantone</td>
+            <td>90%</td>
+          </tr>
+        </table>
+      </div>
     </div>
     <hr/>
     <footer>
