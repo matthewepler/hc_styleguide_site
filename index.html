@@ -17,17 +17,25 @@
     <h2>HOW TO USE THIS SITE</h2>
     <p>This site is meant as a quick reference with links to the tech we use and explanations of how we use them. Use it to figure out what you should use so we're all in sync. This site is also used to generate our style guide with <a href="https://github.com/devbridge/Styleguide">this doohickey</a>. For our complete style guide, go <a href="#">here</a>.
       
-      
-    </p>
+    </p><br/>
     <div id="contents">
       <h2>contents</h2>
+      <hr/>
       <ul>
         <li><a href="#browsers-and-devices">1. Browsers and Devices</a></li><br/>
-        <li><a href="#aesthetics">2. Aesthetics</a></li><br/>
+        <li><a href="#aesthetics">2. Aesthetics</a>
+          <ul class="indent1">
+            <li>colors</li>
+            <li>typography</li>
+            <li>buttons</li>
+            <li>nav</li>
+            <li>forms</li>
+          </ul>
+        </li><br/>
         <li><a href="#assets">3. Assets</a>
           <ul class="indent1">
             <li>logos</li>
-            <li>fonts</li>
+            <li>font files</li>
             <li>images</li>
             <li>icons/glyphs</li><br/>
           </ul>
@@ -49,8 +57,8 @@
         <li><a href="#about">6. About this site</a></li>
       </ul>
     </div><br/>
-    <hr/>
     <h2 id="browsers-and-devices">Browsers and Devices</h2>
+    <hr/>
     <h3>Supported browsers</h3>
     <p>As of 2016, we support the latest version of every browser as well as the previous version. </p>
     <table id="contents">
@@ -88,126 +96,259 @@
     <p>Because of our existing partnerships, we try to compile for iOS, Androids, and Windows mobile platforms. This is done using the technology of your choice. As of Spring, 2016, the Product team is using <a href="https://facebook.github.io/react-native/">React Native</a>, and R&D has explored <a href="https://software.intel.com/en-us/intel-xdk">Intel XDK</a> and is learning React but no platform has been chosen.  
       
     </p><br/>
-    <h2 id="aesthetics">Aesthetics</h2>
+    <h1 id="aesthetics">Aesthetics</h1>
+    <hr/>
     <p>Full style guide <a href="#">is available here</a>. It includes HTML/SCSS/CSS snippets, styles, colors, etc. Use it!
       
     </p>
     <h3>Colors</h3>
     <div id="color-boxes" class="boxes">
-      <div id="global-color" class="box-div">
+      <div class="box-div">
         <p class="strong">GLOBAL</p>
         <div id="global-color-box" class="box"></div>
         <table>
           <tr>
-            <td class="strong">RGB</td>
+            <td>RGB</td>
             <td>80, 158, 47</td>
           </tr>
           <tr>
-            <td class="strong">CMYK</td>
+            <td>CMYK</td>
             <td>79, 0, 100, 2</td>
           </tr>
           <tr>
-            <td class="strong">HEX</td>
-            <td>#509E2f</td>
+            <td>HEX</td>
+            <td>#509E2F</td>
           </tr>
           <tr>
-            <td class="strong">Pantone</td>
+            <td>Pantone</td>
             <td>362C 7739U	</td>
+          </tr>
+          <tr>
+            <td>SCSS var</td>
+            <td>$hc-green</td>
           </tr>
         </table>
       </div>
-      <div id="safety-color" class="box-div">
+      <div class="box-div">
         <p class="strong">SAFETY</p>
         <div id="safety-color-box" class="box"></div>
         <table>
           <tr>
-            <td class="strong">RGB</td>
+            <td>RGB</td>
             <td>255, 105, 0</td>
           </tr>
           <tr>
-            <td class="strong">CMYK</td>
+            <td>CMYK</td>
             <td>0, 56, 90, 0</td>
           </tr>
           <tr>
-            <td class="strong">HEX</td>
+            <td>HEX</td>
             <td>#FF6900</td>
           </tr>
           <tr>
-            <td class="strong">Pantone</td>
-            <td>1505C 021U	</td>
+            <td>Pantone</td>
+            <td>1505C 021U</td>
+          </tr>
+          <tr>
+            <td>SCSS var</td>
+            <td>$hc-orange</td>
           </tr>
         </table>
       </div>
-      <div id="labs-color" class="box-div">
+      <div class="box-div">
         <p class="strong">LABS</p>
         <div id="labs-color-box" class="box"></div>
         <table>
           <tr>
-            <td class="strong">RGB</td>
+            <td>RGB</td>
             <td>150, 60, 189</td>
           </tr>
           <tr>
-            <td class="strong">CMYK</td>
+            <td>CMYK</td>
             <td>58, 87, 0, 0</td>
           </tr>
           <tr>
-            <td class="strong">HEX</td>
+            <td>HEX</td>
             <td>#963CBD</td>
           </tr>
           <tr>
-            <td class="strong">Pantone</td>
+            <td>Pantone</td>
             <td>7442C 2070U	</td>
+          </tr>
+          <tr>
+            <td>SCSS var</td>
+            <td>$hc-purple</td>
           </tr>
         </table>
       </div>
-      <div id="institute-color" class="box-div">
+      <div class="box-div">
         <p class="strong">INSTITUTE</p>
         <div id="institute-color-box" class="box"></div>
         <table>
           <tr>
-            <td class="strong">RGB</td>
+            <td>RGB</td>
             <td>128, 148, 221</td>
           </tr>
           <tr>
-            <td class="strong">CMYK</td>
+            <td>CMYK</td>
             <td>55, 37, 0, 0</td>
           </tr>
           <tr>
-            <td class="strong">HEX</td>
+            <td>HEX</td>
             <td>#8094DD</td>
           </tr>
           <tr>
-            <td class="strong">Pantone</td>
+            <td>Pantone</td>
             <td>7452C</td>
+          </tr>
+          <tr>
+            <td>SCSS var</td>
+            <td>$hc-blue</td>
           </tr>
         </table>
       </div>
-      <div id="all-black" class="box-div">
+      <div class="box-div">
         <p class="strong">BLACK</p>
-        <div id="all-black-box" class="box"></div>
+        <div id="hc-black-box" class="box"></div>
         <table>
           <tr>
-            <td class="strong">RGB</td>
+            <td>RGB</td>
             <td>65, 65, 66</td>
           </tr>
           <tr>
-            <td class="strong">CMYK</td>
+            <td>CMYK</td>
             <td>0, 0, 0, 90</td>
           </tr>
           <tr>
-            <td class="strong">HEX</td>
+            <td>HEX</td>
             <td>#393637</td>
           </tr>
           <tr>
-            <td class="strong">Pantone</td>
+            <td>Pantone</td>
             <td>90%</td>
+          </tr>
+          <tr>
+            <td>SCSS var</td>
+            <td>$hc-black</td>
           </tr>
         </table>
       </div>
-    </div>
-    <hr/>
-    <footer>
-      <p>this is a footer.</p>
-    </footer>
+      <div class="box-div">
+        <p class="strong">GREY</p>
+        <div id="hc-grey-box" class="box"></div>
+        <table>
+          <tr>
+            <td>RGB</td>
+            <td>85, 85, 85</td>
+          </tr>
+          <tr>
+            <td>CMYK</td>
+            <td>64, 54, 50, 6</td>
+          </tr>
+          <tr>
+            <td>HEX</td>
+            <td>#555555</td>
+          </tr>
+          <tr>
+            <td>Pantone</td>
+            <td>425C 419U</td>
+          </tr>
+          <tr>
+            <td>SCSS var</td>
+            <td>$hc-grey</td>
+          </tr>
+        </table>
+      </div>
+      <div class="box-div">
+        <p class="strong">LT GREY</p>
+        <div id="hc-lt-grey-box" class="box"></div>
+        <table>
+          <tr>
+            <td>RGB</td>
+            <td>216, 216, 216</td>
+          </tr>
+          <tr>
+            <td>CMYK</td>
+            <td>10, 7, 5, 0</td>
+          </tr>
+          <tr>
+            <td>HEX</td>
+            <td>#D8D8D8</td>
+          </tr>
+          <tr>
+            <td>Pantone</td>
+            <td>1C 1U</td>
+          </tr>
+          <tr>
+            <td>SCSS var</td>
+            <td>$hc-lt-grey</td>
+          </tr>
+        </table>
+      </div>
+      <div class="box-div">
+        <p class="strong">WHITE</p>
+        <div id="hc-white-box" class="box"></div>
+        <table>
+          <tr>
+            <td>RGB</td>
+            <td>255, 255, 255</td>
+          </tr>
+          <tr>
+            <td>CMYK</td>
+            <td>0, 0, 0, 0</td>
+          </tr>
+          <tr>
+            <td>HEX</td>
+            <td>#FFFFFF</td>
+          </tr>
+          <tr>
+            <td>Pantone</td>
+            <td>663C 649U</td>
+          </tr>
+          <tr>
+            <td>SCSS var</td>
+            <td>$hc-white</td>
+          </tr>
+        </table>
+      </div>
+    </div><br/>
+    <h1 id="typography">Typography
+      <p>See the <a href="front-end">front-end</a> section for font file downloads and SCSS mixin usage. Usually, we use #393637 ($site-black) for color on all fonts. Note, h1 - h3 do not have SCSS variable names. </p>
+      <div id="typo-1">
+        <h1>Heading1 </h1>
+        <div class="desc">fontFace: Bebas Neue, font-size: 2rem, letter-spacing: 1.2px</div>
+        <h2>Heading2</h2>
+        <div class="desc">fontFace: Bebas Neue, font-size: 1.5rem, letter-spacing: 1.2px</div>
+        <h3>Heading3</h3>
+        <div class="desc">fontFace: Bebas Neue, font-size: 1.25rem, letter-spacing: 1.2px</div>
+      </div>
+      <div id="typo2">
+        <p class="section-lt">Section Light</p>
+        <div class="desc">fontFace: Gotham Light, font-size: 1rem, SCSS: 'hc-section-lt'</div>
+        <p class="section-med">Section Medium</p>
+        <div class="desc">fontFace: Gotham Medium, font-size: 1rem, SCSS: 'hc-section-med'</div>
+        <p class="strong">Strong</p>
+        <div class="desc">fontFace: Gotham Medium, font-size: 0.85rem, SCSS: .strong class or strong element</div>
+        <p>Text</p>
+        <div class="desc">fontFace: Gotham Book, font-size: 0.85rem, SCSS: 'hc-text'</div>
+      </div>
+    </h1>
+    <h1 id="buttons">Buttons</h1>
+    <p>I'm totally making all this up. We have no styles for buttons yet. Hover and click too see full styles.</p>
+    <h3>Light</h3>
+    <p>Navigation or general </p>
+    <button class="button-nav button-med">Med Button</button>
+    <button class="button-nav button-sm">Sm. Button</button>
+    <h3>Heavy</h3>
+    <p>Prompt user action. Use corresponding department color. </p>
+    <button class="button-action button-lg">Large Button</button>
+    <button class="button-action button-med">Med Button</button>
+    <Button class="button-action button-sm">Small Button</Button><br/>
+    <h1 id="navigation">Navigation</h1>
+    <p><span class="strong">We use flexbox to create navigation menus.</span> Dept. logo left-justified. Nav links right-justified. On mobile, logo stays and nav links should collapse to right-justified burger icon. Activating icon should toggle horizontal drawer menu. 
+      
+      
+    </p>
+    <footer></footer>
   </body>
 </html>

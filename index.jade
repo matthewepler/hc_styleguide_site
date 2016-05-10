@@ -18,19 +18,27 @@ html
 		h2 HOW TO USE THIS SITE
 		p.
 			This site is meant as a quick reference with links to the tech we use and explanations of how we use them. Use it to figure out what you should use so we're all in sync. This site is also used to generate our style guide with #[a(href="https://github.com/devbridge/Styleguide") this doohickey]. For our complete style guide, go #[a(href="#") here].
-
+	
+		br
 
 		#contents
 			h2 contents
+			hr
 			ul
 				li #[a(href="#browsers-and-devices") 1. Browsers and Devices]
 				br
 				li #[a(href="#aesthetics") 2. Aesthetics]
+					ul.indent1
+						li colors
+						li typography
+						li buttons
+						li nav
+						li forms
 				br
 				li #[a(href="#assets") 3. Assets]
 					ul.indent1
 						li logos
-						li fonts
+						li font files
 						li images
 						li icons/glyphs
 						br
@@ -48,10 +56,10 @@ html
 						br
 				li #[a(href="#about") 6. About this site]
 		br
-		hr
 		
-		//- Browsers & Devices -//
+		//- Browsers & Devices -///////////////////////////////////////////////////////////
 		h2#browsers-and-devices Browsers and Devices
+		hr
 		h3 Supported browsers
 		p As of 2016, we support the latest version of every browser as well as the previous version. 
 		table#contents
@@ -88,101 +96,230 @@ html
 		
 		br
 		
-		//- Aesthetics -//
-		h2#aesthetics Aesthetics
+		//- Aesthetics -///////////////////////////////////////////////////////////
+		//- Color -//
+		h1#aesthetics Aesthetics
+		hr
 		p.
 			Full style guide #[a(href="#") is available here]. It includes HTML/SCSS/CSS snippets, styles, colors, etc. Use it!
 
 		h3 Colors
 		.boxes#color-boxes
-			.box-div#global-color
+			.box-div
 				p.strong GLOBAL
 				.box#global-color-box
 				table
 					tr
-						td.strong RGB
+						td RGB
 						td 80, 158, 47
 					tr
-						td.strong CMYK
+						td CMYK
 						td 79, 0, 100, 2
 					tr
-						td.strong HEX
-						td #509E2f
+						td HEX
+						td #509E2F
 					tr
-						td.strong Pantone
+						td Pantone
 						td 362C 7739U	
-			.box-div#safety-color
+					tr
+						td SCSS var
+						td $hc-green
+
+			.box-div
 				p.strong SAFETY
 				.box#safety-color-box
 				table
 					tr
-						td.strong RGB
+						td RGB
 						td 255, 105, 0
 					tr
-						td.strong CMYK
+						td CMYK
 						td 0, 56, 90, 0
 					tr
-						td.strong HEX
+						td HEX
 						td #FF6900
 					tr
-						td.strong Pantone
-						td 1505C 021U	
-			.box-div#labs-color
+						td Pantone
+						td 1505C 021U
+					tr
+						td SCSS var
+						td $hc-orange
+
+			.box-div
 				p.strong LABS
 				.box#labs-color-box
 				table
 					tr
-						td.strong RGB
+						td RGB
 						td 150, 60, 189
 					tr
-						td.strong CMYK
+						td CMYK
 						td 58, 87, 0, 0
 					tr
-						td.strong HEX
+						td HEX
 						td #963CBD
 					tr
-						td.strong Pantone
+						td Pantone
 						td 7442C 2070U	
-			.box-div#institute-color
+					tr
+						td SCSS var
+						td $hc-purple
+
+			.box-div
 				p.strong INSTITUTE
 				.box#institute-color-box
 				table
 					tr
-						td.strong RGB
+						td RGB
 						td 128, 148, 221
 					tr
-						td.strong CMYK
+						td CMYK
 						td 55, 37, 0, 0
 					tr
-						td.strong HEX
+						td HEX
 						td #8094DD
 					tr
-						td.strong Pantone
+						td Pantone
 						td 7452C
-			.box-div#all-black
+					tr
+						td SCSS var
+						td $hc-blue
+
+			.box-div
 				p.strong BLACK
-				.box#all-black-box
+				.box#hc-black-box
 				table
 					tr
-						td.strong RGB
+						td RGB
 						td 65, 65, 66
 					tr
-						td.strong CMYK
+						td CMYK
 						td 0, 0, 0, 90
 					tr
-						td.strong HEX
+						td HEX
 						td #393637
 					tr
-						td.strong Pantone
+						td Pantone
 						td 90%
+					tr
+						td SCSS var
+						td $hc-black
+			
+			.box-div
+				p.strong GREY
+				.box#hc-grey-box
+				table
+					tr
+						td RGB
+						td 85, 85, 85
+					tr
+						td CMYK
+						td 64, 54, 50, 6
+					tr
+						td HEX
+						td #555555
+					tr
+						td Pantone
+						td 425C 419U
+					tr
+						td SCSS var
+						td $hc-grey
 
-		hr
+			.box-div
+				p.strong LT GREY
+				.box#hc-lt-grey-box
+				table
+					tr
+						td RGB
+						td 216, 216, 216
+					tr
+						td CMYK
+						td 10, 7, 5, 0
+					tr
+						td HEX
+						td #D8D8D8
+					tr
+						td Pantone
+						td 1C 1U
+					tr
+						td SCSS var
+						td $hc-lt-grey
+			
+			.box-div
+				p.strong WHITE
+				.box#hc-white-box
+				table
+					tr
+						td RGB
+						td 255, 255, 255
+					tr
+						td CMYK
+						td 0, 0, 0, 0
+					tr
+						td HEX
+						td #FFFFFF
+					tr
+						td Pantone
+						td 663C 649U
+					tr
+						td SCSS var
+						td $hc-white
+		
+		br
 
+		//- Typography -//
+		h1#typography Typography
+			p See the #[a(href="front-end") front-end] section for font file downloads and SCSS mixin usage. Usually, we use #393637 ($site-black) for color on all fonts. Note, h1 - h3 do not have SCSS variable names. 
+
+			#typo-1
+				h1 Heading1 
+				.desc fontFace: Bebas Neue, font-size: 2rem, letter-spacing: 1.2px
+				
+				h2 Heading2
+				.desc fontFace: Bebas Neue, font-size: 1.5rem, letter-spacing: 1.2px
+
+				h3 Heading3
+				.desc fontFace: Bebas Neue, font-size: 1.25rem, letter-spacing: 1.2px
+			
+			#typo2
+				p.section-lt Section Light
+				.desc fontFace: Gotham Light, font-size: 1rem, SCSS: 'hc-section-lt'
+				
+				p.section-med Section Medium
+				.desc fontFace: Gotham Medium, font-size: 1rem, SCSS: 'hc-section-med'
+				
+				p.strong Strong
+				.desc fontFace: Gotham Medium, font-size: 0.85rem, SCSS: .strong class or strong element
+				
+				p Text
+				.desc fontFace: Gotham Book, font-size: 0.85rem, SCSS: 'hc-text'
+
+		//- Buttons -//
+		h1#buttons Buttons
+		p I'm totally making all this up. We have no styles for buttons yet. Hover and click too see full styles.
+		
+		h3 Light
+		p Navigation or general 
+		button.button-nav.button-med Med Button
+		button.button-nav.button-sm Sm. Button
+
+		h3 Heavy
+		p Prompt user action. Use corresponding department color. 
+		button.button-action.button-lg Large Button
+		button.button-action.button-med Med Button
+		Button.button-action.button-sm Small Button
+		
+		br
+			
+		//- Nav -//
+		h1#navigation Navigation
+		p.
+			#[span.strong We use flexbox to create navigation menus.] Dept. logo left-justified. Nav links right-justified. On mobile, logo stays and nav links should collapse to right-justified burger icon. Activating icon should toggle horizontal drawer menu. 
 
 
 		footer
-			p this is a footer.
 
 
 //- TO DO -//
-//- sliding menu with contents
+//- bold on left side of tables (odd) in color section
+//- side menu with section links
